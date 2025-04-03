@@ -1,11 +1,18 @@
 import { ReactNode } from "react";
+
 import type { Metadata } from "next";
+import { Red_Hat_Display } from "next/font/google";
 
 import "@/app/styles/globals.css";
 
 interface RootLayoutProps {
   children: ReactNode;
 }
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +22,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body
+        className={`${redHatDisplay.className} antialiased bg-background-primary text-content-body`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
