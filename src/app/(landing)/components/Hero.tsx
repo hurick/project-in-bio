@@ -1,11 +1,12 @@
-import { Input, Button, TextArea } from "@/app/components";
+import { Input, Button } from "@/app/components";
 
 export default function Hero() {
   return (
     <section>
-      <div>
-        <h1 className="text-5xl leading-16 font-bold text-white">
-          Your projects & social media in a single link
+      <div className="flex flex-col gap-6">
+        <h1 className="text-5xl leading-16 font-bold text-white max-w-xl">
+          Your projects & social media in a{" "}
+          <span className="underline underline-offset-[16px]">single link</span>
         </h1>
 
         <h2 className="text-xl leading-7">
@@ -13,12 +14,13 @@ export default function Hero() {
           <p>Track engagement with Click Analytics.</p>
         </h2>
 
-        <div>
-          <span className="text-white">projectinbio.com/</span>
-          <Input name="project-link" placeholder="What's your project name?" />
+        <div className="flex items-center gap-3 mt-28">
+          <span className="text-white text-xl">projectinbio.com/</span>
+          <Input name="project-link" placeholder="Your link" />
           <Button>Create now</Button>
         </div>
       </div>
+
       <div></div>
     </section>
   );
