@@ -1,15 +1,13 @@
-import { Input, Button, CardProject } from "@/app/components";
+import {
+  Input,
+  Button,
+  CardProject,
+  CardVisitsCounter,
+} from "@/app/components";
 
 import { imgProject01, imgProject02, imgHurick } from "@/app/static/images";
 
-import {
-  TrendingUp,
-  Linkedin,
-  Instagram,
-  Facebook,
-  Github,
-  PlusIcon,
-} from "lucide-react";
+import { Linkedin, Instagram, Facebook, Github, PlusIcon } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -101,15 +99,10 @@ export default function Hero() {
           </Button>
         </div>
 
-        {/* Total de visitas */}
-        <div className="absolute bottom-4 z-10 left-1/2 flex flex-row items-center gap-5 px-8 py-3 font-bold bg-background-secondary border border-border-primary rounded-xl">
-          <span>Total de visitas</span>
-
-          <span className="flex flex-row items-center gap-2 text-4xl text-accent-green">
-            12,453
-            <TrendingUp />
-          </span>
-        </div>
+        <CardVisitsCounter
+          className="absolute bottom-4 z-10 left-1/2"
+          totalVisits={12453}
+        />
       </div>
     </section>
   );
