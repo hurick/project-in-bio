@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "clean": "rm -rf .next node_modules package-lock.json yarn.lock pnpm-lock.yaml && pnpm install"
+    "clean": "rm -rf .next node_modules package-lock.json yarn.lock pnpm-lock.yaml && pnpm install && pnpm dev"
   },
   "dependencies": {
+    "lucide-react": "0.487.0",
     "next": "15.2.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwind-merge": "3.1.0"
+    "tailwind-merge": "3.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.3",

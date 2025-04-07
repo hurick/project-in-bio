@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Red_Hat_Display } from "next/font/google";
 
-import "@/app/styles/globals.css";
+import "@/app/static/styles/globals.css";
 
 interface RootLayoutProps {
   children: ReactNode;
