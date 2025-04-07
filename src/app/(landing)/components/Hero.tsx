@@ -1,4 +1,4 @@
-import { Input, Button } from "@/app/components";
+import { Input, Button, CardProject } from "@/app/components";
 
 import { imgProject01, imgProject02, imgHurick } from "@/app/static/images";
 
@@ -35,35 +35,23 @@ export default function Hero() {
       </div>
 
       <div className="relative flex flex-col items-center flex-1 bg-[radial-gradient(circle_at_50%_50%,rgba(75,45,187,.35),transparent_75%)]">
-        {/* 15 Cliques */}
-        <div className="absolute -z-20 -top-12 left-25 flex flex-row items-start max-w-85 min-w-85 rounded-xl gap-5 p-3 bg-background-secondary">
-          <img
-            src={imgProject01.src}
-            alt="Preview of a project page showing social media links and engagement metrics"
-          />
-          <div>
-            <span className="inline-flex mb-3 font-bold text-sm text-accent-light-green">
-              15 clicks
-            </span>
-            <h3 className="font-bold text-lg">BugTracer</h3>
-            <h4>Simple bug tracker</h4>
-          </div>
-        </div>
+        <CardProject
+          className="absolute -z-20 -top-12 left-25"
+          clicks={15}
+          projectName="BugTracer"
+          projectDescription="Simple bug tracker"
+          image={imgProject01}
+          imageAlt="Preview of a project page showing social media links and engagement metrics"
+        />
 
-        {/* 2 Cliques */}
-        <div className="absolute top-28 left-[40px] -z-20 flex flex-row items-start max-w-85 min-w-85 rounded-xl gap-5 p-3 bg-background-secondary">
-          <img
-            src={imgProject02.src}
-            alt="Display showing multiple lines of code"
-          />
-          <div>
-            <span className="inline-flex mb-3 font-bold text-sm text-accent-light-orange">
-              2 clicks
-            </span>
-            <h3 className="font-bold text-lg">CodeLink</h3>
-            <h4>GitHub and GitLab integration</h4>
-          </div>
-        </div>
+        <CardProject
+          className="absolute top-28 left-[40px] -z-20"
+          clicks={2}
+          projectName="CodeLink"
+          projectDescription="GitHub and GitLab integration"
+          image={imgProject02}
+          imageAlt="Display showing multiple lines of code"
+        />
 
         {/* Main Card */}
         <div className="flex flex-col z-10 gap-5 max-w-82 w-full p-5 pb-24 bg-background-secondary rounded-4xl border border-border-primary">
@@ -74,12 +62,12 @@ export default function Hero() {
           />
 
           <div className="flex flex-col gap-2 items-start">
-            <h3 className="font-bold text-4xl text-ellipsis whitespace-nowrap overflow-x-hidden w-full">
+            <h3 className="font-bold text-4xl text-ellipsis whitespace-nowrap overflow-hidden w-full">
               Hurick Krügner
             </h3>
 
             <h4 className="font-medium text-content-body/40">
-              I create internet products
+              I create products for the internet
             </h4>
           </div>
 
