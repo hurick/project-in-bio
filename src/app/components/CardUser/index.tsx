@@ -70,7 +70,7 @@ export function CardUser({
         </h3>
 
         {description && (
-          <h4 className="font-medium text-content-body/40">{description}</h4>
+          <h4 className="font-medium text-content-body/60">{description}</h4>
         )}
       </div>
 
