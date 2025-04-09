@@ -3,11 +3,10 @@ import {
   Button,
   CardProject,
   CardVisitsCounter,
+  CardUser,
 } from "@/app/components";
 
 import { imgProject01, imgProject02, imgHurick } from "@/app/static/images";
-
-import { Linkedin, Instagram, Facebook, Github, PlusIcon } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -32,9 +31,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center flex-1 bg-[radial-gradient(circle_at_50%_50%,rgba(75,45,187,.35),transparent_75%)]">
+      <div className="relative flex flex-col items-center flex-1 bg-[radial-gradient(circle_at_50%_50%,rgba(75,45,187,.35),transparent_80%)]">
         <CardProject
-          className="absolute -z-20 -top-12 left-25"
+          className="absolute z-10 -top-12 left-25"
           clicks={15}
           projectName="BugTracer"
           projectDescription="Simple bug tracker"
@@ -43,7 +42,7 @@ export default function Hero() {
         />
 
         <CardProject
-          className="absolute top-28 left-[40px] -z-20"
+          className="absolute top-28 left-[40px] z-10"
           clicks={2}
           projectName="CodeLink"
           projectDescription="GitHub and GitLab integration"
@@ -51,53 +50,14 @@ export default function Hero() {
           imageAlt="Display showing multiple lines of code"
         />
 
-        {/* Main Card */}
-        <div className="flex flex-col z-10 gap-5 max-w-82 w-full p-5 pb-24 bg-background-secondary rounded-4xl border border-border-primary">
-          <img
-            src={imgHurick.src}
-            alt="Portrait of Hurick Krügner"
-            className="inline-flex self-center size-50 rounded-full"
-          />
-
-          <div className="flex flex-col gap-2 items-start">
-            <h3 className="font-bold text-4xl text-ellipsis whitespace-nowrap overflow-hidden w-full">
-              Hurick Krügner
-            </h3>
-
-            <h4 className="font-medium text-content-body/40">
-              I create products for the internet
-            </h4>
-          </div>
-
-          <div className="flex flex-col gap-2 py-5 border-t border-b border-border-primary">
-            <span className="uppercase text-sm font-medium">Links</span>
-            <div className="flex flex-row justify-between">
-              <Button variant="secondary">
-                <Linkedin />
-              </Button>
-
-              <Button variant="secondary">
-                <Instagram />
-              </Button>
-
-              <Button variant="secondary">
-                <Facebook />
-              </Button>
-
-              <Button variant="secondary">
-                <Github />
-              </Button>
-
-              <Button variant="secondary">
-                <PlusIcon />
-              </Button>
-            </div>
-          </div>
-
-          <Button>
-            <span>Check out my SaaS template</span>
-          </Button>
-        </div>
+        <CardUser
+          containerClassName="pb-24"
+          image={imgHurick}
+          imageAlt="Portrait of Hurick Krügner"
+          name="Hurick Krügner"
+          description="I create products for the internet"
+          buttonLabel="Check out my SaaS template"
+        />
 
         <CardVisitsCounter
           className="absolute bottom-4 z-10 left-1/2"
