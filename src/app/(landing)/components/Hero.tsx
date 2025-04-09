@@ -8,7 +8,7 @@ import {
 
 import { imgProject01, imgProject02, imgHurick } from "@/app/static/images";
 
-export default function Hero() {
+export function Hero() {
   return (
     <section className="flex">
       <div className="flex flex-col gap-6">

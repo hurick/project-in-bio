@@ -1,11 +1,12 @@
-import Hero from "./components/Hero";
+import { Header, Hero } from "./components";
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto mt-50">
+    <div className="max-w-7xl mx-auto">
+      <Header />
       <Hero />
 
-      {/* <Header />
+      {/*
       <VideoExplanation />
       <Pricing />
       <FAQ /> */}
