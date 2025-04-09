@@ -5,7 +5,8 @@ import { twMerge } from "tailwind-merge";
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   labelClassName?: string;
-  wrapperClassName?: string;
+  containerClassName?: string;
+  inputClassName?: string;
   name: string;
 }
 
@@ -13,16 +14,16 @@ export function Input({
   label,
   type = "text",
   inputMode = "text",
-  className,
+  inputClassName,
   labelClassName,
-  wrapperClassName,
+  containerClassName,
   name,
   ...props
 }: InputProps) {
-  const wrapperClassNames = twMerge(
+  const containerClassNames = twMerge(
     "inline-flex",
     label && "flex flex-col items-start gap-1",
-    wrapperClassName
+    containerClassName
   );
 
   const labelClassNames = twMerge("font-bold text-white", labelClassName);
@@ -32,11 +33,11 @@ export function Input({
     "placeholder:placeholder-content-placeholder placeholder:transition-colors",
     "hover:placeholder:text-content-body hover:border-border-secondary",
     "focus:border-border-tertiary",
-    className
+    inputClassName
   );
 
   return (
-    <div className={wrapperClassNames}>
+    <div className={containerClassNames}>
       {label && (
         <label htmlFor={props.id ?? name} className={labelClassNames}>
           {label}

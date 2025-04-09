@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export function Header({ className }: HeaderProps) {
   const headerClassNames = twMerge(
-    "max-w-7xl mx-auto flex items-center justify-between py-10",
+    "flex items-center justify-between py-10",
     className
   );
 

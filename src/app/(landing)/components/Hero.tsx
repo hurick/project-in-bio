@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 import {
   Input,
   Button,
@@ -8,10 +10,16 @@ import {
 
 import { imgProject01, imgProject02, imgHurick } from "@/app/static/images";
 
-export function Hero() {
+interface HeroProps {
+  className?: string;
+}
+
+export function Hero({ className }: HeroProps) {
+  const heroClassNames = twMerge("flex items-center", className);
+
   return (
-    <section className="flex">
-      <div className="flex flex-col gap-6">
+    <section className={heroClassNames}>
+      <div className="flex flex-col gap-6 max-w-1/2 w-full">
         <h1 className="text-5xl leading-16 font-bold text-white max-w-xl">
           Your projects & social media in a{" "}
           <span className="underline underline-offset-[16px]">single link</span>
@@ -26,14 +34,19 @@ export function Hero() {
           <label htmlFor="project-link" className="text-white text-xl">
             projectinbio.com/
           </label>
-          <Input name="project-link" placeholder="your-link-here" />
+          <Input
+            containerClassName="flex-1"
+            inputClassName="w-full"
+            name="project-link"
+            placeholder="your-link-here"
+          />
           <Button>Create now</Button>
         </div>
       </div>
 
       <div className="relative flex flex-col items-center flex-1 bg-[radial-gradient(circle_at_50%_50%,rgba(75,45,187,.35),transparent_80%)]">
         <CardProject
-          className="absolute z-10 -top-12 left-25"
+          className="absolute z-10 -top-12 -left-1"
           clicks={15}
           projectName="BugTracer"
           projectDescription="Simple bug tracker"
@@ -42,7 +55,7 @@ export function Hero() {
         />
 
         <CardProject
-          className="absolute top-28 left-[40px] z-10"
+          className="absolute top-28 left-2.5 z-10"
           clicks={2}
           projectName="CodeLink"
           projectDescription="GitHub and GitLab integration"
