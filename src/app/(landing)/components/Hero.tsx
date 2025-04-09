@@ -1,5 +1,3 @@
-import { twMerge } from "tailwind-merge";
-
 import {
   Input,
   Button,
@@ -10,15 +8,9 @@ import {
 
 import { imgProject01, imgProject02, imgHurick } from "@/app/static/images";
 
-interface HeroProps {
-  className?: string;
-}
-
-export function Hero({ className }: HeroProps) {
-  const heroClassNames = twMerge("flex items-center", className);
-
+export function Hero() {
   return (
-    <section className={heroClassNames}>
+    <section className="flex items-center">
       <div className="flex flex-col gap-6 max-w-1/2 w-full">
         <h1 className="text-5xl leading-16 font-bold text-white max-w-xl">
           Your projects & social media in a{" "}

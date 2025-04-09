@@ -1,21 +1,10 @@
-import { twMerge } from "tailwind-merge";
-
 import { Button } from "@/app/components/Button";
 
 import { imgLogo } from "@/app/static/images";
 
-interface HeaderProps {
-  className?: string;
-}
-
-export function Header({ className }: HeaderProps) {
-  const headerClassNames = twMerge(
-    "flex items-center justify-between py-10",
-    className
-  );
-
+export function Header() {
   return (
-    <header className={headerClassNames}>
+    <header className="flex items-center justify-between py-10">
       <img src={imgLogo.src} alt="ProjectinBio logo" />
 
       <div className="flex items-center gap-4">
