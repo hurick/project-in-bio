@@ -31,7 +31,7 @@ export function CardProject({
 
   return (
     <div className={cardClassNames}>
-      <img src={image.src} alt={imageAlt} />
+      <img src={image.src} alt={imageAlt} width={95} height={105} />
       <div>
         <span className={clickClassNames}>{clicks} clicks</span>
         <h3 className="font-bold text-lg">{projectName}</h3>

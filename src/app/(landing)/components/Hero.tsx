@@ -22,11 +22,11 @@ export default function Hero() {
           <p>Track engagement with Click Analytics.</p>
         </h2>
 
-        <div className="flex items-center gap-3 mt-28">
+        <div className="flex items-center gap-2 mt-28">
           <label htmlFor="project-link" className="text-white text-xl">
             projectinbio.com/
           </label>
-          <Input name="project-link" placeholder="Your link" />
+          <Input name="project-link" placeholder="your-link-here" />
           <Button>Create now</Button>
         </div>
       </div>
