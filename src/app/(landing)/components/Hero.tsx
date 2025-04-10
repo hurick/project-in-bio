@@ -36,7 +36,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center flex-1 bg-[radial-gradient(circle_at_50%_50%,rgba(75,45,187,.35),transparent_80%)]">
+      <div className="relative flex flex-col items-center flex-1 bg-[radial-gradient(circle_at_50%_50%,rgba(75,45,187,.30),transparent_70%)]">
         <CardProject
           className="absolute z-10 -top-12 -left-1"
           clicks={15}
