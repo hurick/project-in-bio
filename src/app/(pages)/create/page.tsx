@@ -14,12 +14,16 @@ export default function CreatePage() {
         </div>
 
         <form className="flex items-center gap-2">
-          <span className="text-white">projectinbio.com/</span>
+          <label htmlFor="create-custom-link" className="text-white">
+            projectinbio.com/
+          </label>
+
           <Input
-            name="your-link"
+            name="create-custom-link"
             placeholder="your-custom-link-here"
             inputClassName="min-w-96"
           />
+
           <Button type="submit" className="min-w-32">
             Create
           </Button>
