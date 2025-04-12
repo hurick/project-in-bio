@@ -4,7 +4,7 @@ import { Button } from "@/app/components/Button";
 
 export function Pricing() {
   return (
-    <section className="flex flex-col gap-16 pb-20 border-b border-border-primary px-4">
+    <section className="flex flex-col gap-16 px-4">
       <div className="flex flex-col gap-6 mx-auto max-w-2xl text-center">
         <h2 className="font-bold text-4xl text-white">
           An affordable value for everyone
