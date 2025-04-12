@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-
 import type { Metadata } from "next";
+
 import { Red_Hat_Display } from "next/font/google";
 
 import "@/app/static/styles/globals.css";
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`${redHatDisplay.className} antialiased bg-background-primary text-content-body`}
+        className={`${redHatDisplay.className} antialiased bg-background-primary text-content-body max-w-7xl mx-auto`}
       >
         {children}
       </body>
