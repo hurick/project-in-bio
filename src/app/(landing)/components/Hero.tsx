@@ -10,7 +10,7 @@ import { imgProject01, imgProject02, imgHurick } from "@/app/static/images";
 
 export function Hero() {
   return (
-    <section className="flex items-center">
+    <section className="flex items-center h-[calc(100vh-290px)]">
       <div className="flex flex-col gap-6 max-w-1/2 w-full">
         <h1 className="text-5xl leading-16 font-bold text-white max-w-xl">
           Your projects & social media in a{" "}
