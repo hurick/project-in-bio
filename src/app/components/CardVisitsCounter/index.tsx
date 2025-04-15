@@ -14,7 +14,7 @@ export function CardVisitsCounter({
   const formattedVisits = new Intl.NumberFormat("en-US").format(totalVisits);
 
   const cardClassNames = twMerge(
-    "flex flex-row items-center gap-5 px-8 py-3 font-bold bg-background-secondary border border-border-primary rounded-xl",
+    "flex flex-row items-center justify-center gap-5 px-8 py-3 font-bold bg-background-secondary border border-border-primary rounded-xl",
     className
   );
 
