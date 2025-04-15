@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Plus } from "lucide-react";
 
 import { imgHurick, imgProject01 } from "@/app/static/images";
@@ -22,10 +24,13 @@ export default async function UserProfilePage({
     <>
       <div className="z-10 fixed top-0 left-0 w-full flex items-center justify-center py-3 bg-background-tertiary">
         <p>
-          Você está na versão trial.{" "}
-          <span className="font-bold text-accent-green cursor-pointer hover:underline underline-offset-4">
-            Faça o upgrade agora!
-          </span>
+          You are on the trial version.{" "}
+          <Link
+            href={`${profileId}/upgrade`}
+            className="font-bold text-accent-green cursor-pointer hover:underline underline-offset-4"
+          >
+            Upgrade now!
+          </Link>
         </p>
       </div>
 
