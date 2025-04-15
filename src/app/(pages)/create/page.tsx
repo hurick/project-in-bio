@@ -7,7 +7,7 @@ export default function CreatePage() {
     <>
       <Header />
 
-      <div className="h-[calc(100vh-260px)] flex flex-col items-center justify-center gap-10">
+      <main className="h-[calc(100vh-260px)] flex flex-col items-center justify-center gap-10">
         <div className="flex items-center gap-4 text-white">
           <h1 className="font-bold text-4xl">Choose your link</h1>
           <Rocket className="size-10" />
@@ -32,7 +32,7 @@ export default function CreatePage() {
         <div>
           <span className="text-accent-pink">Example error</span>
         </div>
-      </div>
+      </main>
     </>
   );
 }

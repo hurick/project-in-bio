@@ -9,7 +9,7 @@ export default function UpgradePage() {
 
       <main className="h-[calc(100vh-290px)] flex flex-col items-center justify-center gap-8">
         <div className="flex items-center gap-4 text-white">
-          <h1 className="font-bold text-4xl">What plan is best for you?</h1>
+          <h1 className="font-bold text-4xl">What option is best for you?</h1>
           <Rocket className="size-10" />
         </div>
 
