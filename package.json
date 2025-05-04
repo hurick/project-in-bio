@@ -8,18 +8,18 @@
     "clean": "rm -rf .next node_modules package-lock.json yarn.lock pnpm-lock.yaml && pnpm install && pnpm dev"
   },
   "dependencies": {
-    "lucide-react": "0.488.0",
+    "lucide-react": "0.507.0",
     "next": "15.3.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "3.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.1.4",
-    "@types/node": "22.14.1",
+    "@tailwindcss/postcss": "4.1.5",
+    "@types/node": "22.15.3",
     "@types/react": "19.1.2",
-    "@types/react-dom": "19.1.2",
-    "tailwindcss": "4.1.4",
+    "@types/react-dom": "19.1.3",
+    "tailwindcss": "4.1.5",
     "typescript": "5.8.3"
   }
 }
